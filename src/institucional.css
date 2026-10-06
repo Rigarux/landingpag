@@ -1,0 +1,168 @@
+/* Institutional Section (Definición Institucional) */
+.inst-section {
+  position: relative;
+  margin-top: 4rem;
+}
+
+.inst-container {
+  position: relative;
+  display: flex;
+  min-height: 600px;
+  align-items: center;
+  padding: clamp(2rem, 5vw, 4rem) 0;
+}
+
+.inst-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 85%;
+  background: linear-gradient(to right, rgba(15,23,42,0.95) 0%, rgba(15,23,42,0.6) 100%), url('./assets/institucional_bg.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 24px;
+  z-index: 0;
+}
+
+.inst-content-wrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0 clamp(1.5rem, 5vw, 4rem);
+  gap: 2rem;
+  align-items: center;
+}
+
+.inst-left {
+  flex: 1 1 500px;
+  color: white;
+  padding-right: clamp(1rem, 5vw, 4rem);
+}
+
+.inst-left h3 {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+  color: white;
+}
+
+.inst-left p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  opacity: 0.95;
+  text-align: justify;
+  max-width: 600px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.inst-btn {
+  border: 1px solid rgba(255,255,255,0.4);
+  display: inline-flex;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.inst-btn:hover {
+  background: white;
+  color: #0f172a;
+}
+
+.inst-right {
+  flex: 1 1 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.inst-card {
+  background: #FFFFFF;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15);
+  border-left: 4px solid #1E293B;
+  margin-left: auto;
+  width: 100%;
+  max-width: 450px;
+  transition: transform 0.3s ease;
+}
+
+.inst-card h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #334155;
+  margin-bottom: 1rem;
+}
+
+.inst-card p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  text-align: justify;
+  margin: 0;
+}
+
+.inst-valores {
+  margin-top: 3rem;
+  padding: 0 clamp(1.5rem, 5vw, 4rem);
+}
+
+.inst-valores h4 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #1E293B;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.valores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.valor-card {
+  background: #F8FAFC;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-top: 3px solid #1E293B;
+  transition: transform 0.3s ease;
+}
+
+.valor-card:hover {
+  transform: translateY(-5px);
+}
+
+.valor-card h5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 0.75rem;
+}
+
+.valor-card p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  text-align: justify;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .inst-bg {
+    width: 100%;
+  }
+  .inst-card {
+    margin-left: 0;
+    max-width: 100%;
+  }
+}
